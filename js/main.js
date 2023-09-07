@@ -275,3 +275,17 @@
 
 })(jQuery);
 
+  $(document).ready(function() {
+    $('.navbar-nav a.nav-link').on('click', function() {
+      $('.navbar-collapse').collapse('hide');
+    });
+  });
+  $(document).ready(function() {
+	$('[data-toggle="scroll"]').on('click', function() {
+	  var target = $(this).attr('data-target');
+	  $('html, body').animate({
+		scrollTop: $(target).offset().top
+	  }, 1000); // Adjust the scroll speed if needed
+	});
+  });
+
